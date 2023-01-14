@@ -20,8 +20,8 @@
   display: grid;
   grid-template-rows: 220px 1fr;
 
-  width: 23%;
-  height: 400px;
+  width: 21%;
+  height: 420px;
   border-radius: 10px;
 
   position: relative;
@@ -30,13 +30,14 @@
 
 #weathercon {
   /* background-color: red; */
+  font-size: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .icon {
-  font-size: 60px;
+  animation: zoom 3s linear infinite alternate;
 }
 
 .wave {
@@ -49,7 +50,7 @@
 
 .one {
   animation: rotate 7s infinite linear;
-  background-color: rgba(13, 182, 182, 0.288);
+  background-color: rgba(13, 182, 182, 0.123);
 }
 
 .two {
@@ -59,7 +60,7 @@
 
 .three {
   animation: rotate 4s infinite linear;
-  background-color: rgba(13, 182, 182, 0.123);
+  background-color: rgba(13, 182, 182, 0.288);
 }
 
 .info {
@@ -68,7 +69,7 @@
 }
 
 .info .temp {
-  margin: 20px 0 20px 0;
+  margin: 20px 0;
 }
 
 @keyframes rotate {
@@ -77,5 +78,14 @@
   }
   to {
     transform: rotate(359deg);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.3);
   }
 }
